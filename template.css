@@ -1,0 +1,31 @@
+@import url("//db.onlinewebfonts.com/c/a129bb6d34d961999439ccd226117760?family=Foundry+Monoline");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Foundry Monoline", "Segoe UI",
+    "roboto", sans-serif;
+
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --red: #df0209;
+  --gray-background: #eeeeee;
+  --gray-text: #727b7a;
+  --gray-border: #d5d5d5;
+  --text: #000;
+  --copyright: #707070;
+  --placeholder: #00000061;
+  --green: #1cb72a;
+}
