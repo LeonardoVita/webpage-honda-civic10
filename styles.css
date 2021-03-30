@@ -84,6 +84,103 @@
     no-repeat padding-box;
 }
 
+/* FLOAT CONTACT CONTAINER  */
+.float-container {
+  position: fixed;
+  right: 8vw;
+  top: 20vh;
+  z-index: 10;
+
+  padding: 20px;
+  background-color: var(--gray-background);
+  border-radius: 4px;
+  width: 270px;
+  height: 352px;
+}
+
+.float-title {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.float-title img {
+  width: 38px;
+  margin-right: 11px;
+}
+
+.float-title p {
+  font-size: 0.9rem;
+}
+
+.float-title span {
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+.float-container > form > input,
+.float-container > form > select {
+  width: 100%;
+  height: 36px;
+  padding: 10px;
+  margin-bottom: 5px;
+
+  background-color: transparent;
+  border: 1px solid var(--gray-border);
+  font-family: "roboto";
+}
+
+.float-container > form > input[type="text"] {
+  background: url("./assets/icons/Grupo\ 32.svg") no-repeat scroll 10px 10px;
+  padding-left: 37px;
+}
+
+.float-container > form > input[type="email"] {
+  background: url("./assets/icons/black-envelope.svg") no-repeat scroll 10px
+    10px;
+  padding-left: 37px;
+}
+
+.float-container > form > input[type="tel"] {
+  background: url("./assets/icons/call-answer.svg") no-repeat scroll 10px 10px;
+  padding-left: 37px;
+}
+
+.float-container > form > select[id="hours"] {
+  background: url("./assets/icons/clock-circular-outline.svg") no-repeat scroll
+    10px 10px;
+  padding-left: 37px;
+}
+
+.float-container > form > select[id="local"] {
+  background: url("./assets/icons/facebook-placeholder-for-locate-places-on-maps-1.svg")
+    no-repeat scroll 10px 10px;
+  padding-left: 37px;
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--gray-background) inset !important;
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: inherit;
+}
+
+.float-container > form > button {
+  width: 100%;
+  height: 45px;
+  font-family: "roboto";
+
+  border-radius: 4px;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.float-container > form > button:hover {
+  opacity: 0.9;
+}
 /* HOME  */
 
 .home-container {
@@ -114,6 +211,7 @@
 
 .home-container > p {
   font-size: 1.5rem;
+  margin-right: 16rem;
 }
 
 /* CIVIC 10 SECTION  */
@@ -225,7 +323,7 @@
 }
 
 .honda-card > div > img {
-  min-width: 200px;
+  min-width: 150px;
   margin-bottom: 10px;
 }
 
