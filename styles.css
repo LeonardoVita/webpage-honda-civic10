@@ -607,7 +607,12 @@ input:-webkit-autofill {
     margin: 0 20px;
     width: auto;
     max-width: 350px;
-    height: 352px;
+    height: 370px;
+  }
+
+  .float-container > form > input,
+  .float-container > form > select {
+    height: 40px;
   }
 
   .phone-container {
