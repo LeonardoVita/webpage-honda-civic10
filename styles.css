@@ -21,6 +21,11 @@
   margin-right: 10px;
 }
 
+.nav-container a > p {
+  color: var(--copyright);
+  font-size: 0.9rem;
+}
+
 .nav-container a:hover {
   text-decoration: underline;
 }
@@ -39,19 +44,32 @@
 .nav-contact-container a:nth-child(1) {
   margin-right: 1.5rem;
 }
+.nav-container-mobile {
+  display: none;
+}
 
 .phone-container {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   padding: 5px 8rem;
   margin-bottom: 20px;
 }
 
+.phone-container h2 {
+  min-width: 200px;
+}
+
 .phone-number {
-  flex: 1;
+  flex-basis: 354px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+
+  white-space: nowrap;
 }
 
 .phone-number > div > p {
@@ -82,6 +100,10 @@
   height: 130px;
   background: transparent url("img/os-eleitos-grande-vencedor-2017_0.png") 0% 0%
     no-repeat padding-box;
+}
+
+.hero-image-container-mobile {
+  display: none;
 }
 
 /* FLOAT CONTACT CONTAINER  */
@@ -184,7 +206,7 @@ input:-webkit-autofill {
 /* HOME  */
 
 .home-container {
-  padding: 5px 8rem;
+  padding: 5px 400px 5px 8rem;
   margin-bottom: 20px;
 }
 
@@ -194,6 +216,7 @@ input:-webkit-autofill {
   font-weight: 400;
   font-size: 2rem;
 }
+
 .home-img-container {
   display: flex;
   align-items: center;
@@ -211,7 +234,6 @@ input:-webkit-autofill {
 
 .home-container > p {
   font-size: 1.5rem;
-  margin-right: 16rem;
 }
 
 /* CIVIC 10 SECTION  */
@@ -222,9 +244,14 @@ input:-webkit-autofill {
   margin-bottom: 40px;
 }
 
+.civic10-img-mobile {
+  display: none;
+}
+
 .civic10-container {
   display: flex;
-  padding: 5px 400px 5px 8rem;
+  flex-wrap: wrap-reverse;
+  padding: 5px 385px 5px 8rem;
   margin-bottom: 30px;
 }
 
@@ -240,6 +267,7 @@ input:-webkit-autofill {
   position: absolute;
   bottom: 30px;
   left: 8rem;
+  right: 400px;
 }
 
 .civic10-text h2 {
@@ -257,18 +285,14 @@ input:-webkit-autofill {
 }
 
 .civic10-card {
-  width: 100%;
+  flex: 1;
+  flex-basis: 200px;
+  margin: 15px;
 }
 
 .civic10-card > div > img {
-  min-width: 200px;
   border: 2px solid var(--gray-border);
   padding: 4px;
-}
-
-.civic10-card:nth-child(1),
-.civic10-card:nth-child(2) {
-  margin-right: 30px;
 }
 
 .civic10-card h3 {
@@ -284,7 +308,7 @@ input:-webkit-autofill {
 /* HONDA MARCAS  */
 
 .brands-container {
-  padding: 5px 400px 5px 8rem;
+  padding: 5px 385px 5px 8rem;
   margin-bottom: 60px;
 
   display: flex;
@@ -302,20 +326,17 @@ input:-webkit-autofill {
   margin-bottom: 33px;
 }
 
-.hondar-card-container {
+.honda-card-container {
   display: flex;
-}
-
-.honda-card:nth-child(1),
-.honda-card:nth-child(2) {
-  margin-right: 30px;
+  flex-wrap: wrap-reverse;
 }
 
 .honda-card {
   width: 100%;
+  flex: 1;
   border: 1px solid var(--gray-border);
   padding: 0 20px 22px 20px;
-
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,31 +378,32 @@ input:-webkit-autofill {
 }
 
 .contact-container {
-  padding: 5px 8rem;
+  padding: 5px 385px 5px 8rem;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .contact-card-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-card {
   display: flex;
   align-items: center;
   justify-content: center;
+
   background-color: var(--white);
   padding: 10px 15px;
-  margin-bottom: 17px;
+  margin: 0 15px 17px 15px;
 
   border: 1px solid var(--red);
   border-radius: 5px;
-}
 
-.contact-card:nth-child(1) {
-  margin-right: 30px;
+  white-space: nowrap;
 }
 
 .contact-card > img {
@@ -406,14 +428,16 @@ input:-webkit-autofill {
   font-style: italic;
 }
 
-.contact-container > h3 {
+.contact-container > div > h3 {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-container {
   display: flex;
+  justify-content: center;
 }
 
 .social-card {
@@ -461,6 +485,7 @@ input:-webkit-autofill {
   padding: 5px 8rem;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -469,4 +494,203 @@ input:-webkit-autofill {
   margin: 0 20px 0 137px;
   color: var(--copyright);
   font-size: 0.8rem;
+}
+
+.ibama-container {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1154px) {
+  .float-container {
+    right: 1vw;
+  }
+
+  .home-container {
+    padding: 5px 300px 5px 8rem;
+  }
+
+  .civic10-text {
+    right: 300px;
+  }
+
+  .civic10-container {
+    padding: 5px 300px 5px 8rem;
+  }
+
+  .brands-container {
+    padding: 5px 285px 5px 8rem;
+  }
+
+  .contact-container {
+    padding: 5px 285px 5px 8rem;
+  }
+}
+
+@media (max-width: 907px) {
+  .home-img-container {
+    flex-direction: column;
+  }
+
+  .lateral-imgs {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .lateral-imgs div {
+    flex: 1;
+    margin: 5px;
+    flex-basis: 100px;
+  }
+}
+
+@media (max-width: 794px) {
+  body {
+    text-align: center;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .nav-container-mobile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .nav-container-mobile > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 80px;
+    height: 40px;
+  }
+
+  .nav-container-mobile > a > svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .phone-container {
+    margin-top: 20px;
+  }
+
+  .hero-image-container {
+    display: none;
+  }
+
+  .hero-image-container-mobile {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .hero-image-container-mobile img:nth-child(2) {
+    padding: 0 20px;
+  }
+
+  .float-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .float-container {
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 1;
+    margin: 0 20px;
+    width: auto;
+    max-width: 350px;
+    height: 352px;
+  }
+
+  .phone-container {
+    padding: 5px 20px;
+  }
+
+  .home-container {
+    padding: 5px 20px 5px 20px;
+  }
+
+  .civic10-text {
+    right: 20px;
+  }
+
+  .civic10-container {
+    padding: 5px 20px 5px 20px;
+  }
+
+  .brands-container {
+    padding: 5px 20px 5px 20px;
+  }
+
+  .contact-container {
+    padding: 5px 20px 5px 20px;
+  }
+
+  .lateral-imgs {
+    display: none;
+  }
+
+  .civic10-img {
+    display: none;
+  }
+
+  .civic10-background {
+    display: flex;
+    justify-content: center;
+  }
+
+  .civic10-img-mobile {
+    display: block;
+    max-width: 500px;
+  }
+
+  .civic10-text {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(-50%);
+  }
+
+  .civic10-text h2 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .civic10-text p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .copyright-container {
+    padding: 5px 20px;
+
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .copyright-container p {
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media (max-width: 594px) {
+  .phone-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .phone-number {
+    margin-top: 30px;
+  }
 }
