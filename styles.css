@@ -223,7 +223,8 @@ input:-webkit-autofill {
 
 .civic10-container {
   display: flex;
-  padding: 5px 400px 5px 8rem;
+  flex-wrap: wrap-reverse;
+  padding: 5px 385px 5px 8rem;
   margin-bottom: 30px;
 }
 
@@ -257,18 +258,14 @@ input:-webkit-autofill {
 }
 
 .civic10-card {
-  width: 100%;
+  flex: 1;
+  flex-basis: 200px;
+  margin: 15px;
 }
 
 .civic10-card > div > img {
-  min-width: 200px;
   border: 2px solid var(--gray-border);
   padding: 4px;
-}
-
-.civic10-card:nth-child(1),
-.civic10-card:nth-child(2) {
-  margin-right: 30px;
 }
 
 .civic10-card h3 {
@@ -284,7 +281,7 @@ input:-webkit-autofill {
 /* HONDA MARCAS  */
 
 .brands-container {
-  padding: 5px 400px 5px 8rem;
+  padding: 5px 385px 5px 8rem;
   margin-bottom: 60px;
 
   display: flex;
@@ -304,11 +301,7 @@ input:-webkit-autofill {
 
 .honda-card-container {
   display: flex;
-}
-
-.honda-card:nth-child(1),
-.honda-card:nth-child(2) {
-  margin-right: 30px;
+  flex-wrap: wrap-reverse;
 }
 
 .honda-card {
@@ -316,7 +309,7 @@ input:-webkit-autofill {
   flex: 1;
   border: 1px solid var(--gray-border);
   padding: 0 20px 22px 20px;
-
+  margin: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -358,7 +351,7 @@ input:-webkit-autofill {
 }
 
 .contact-container {
-  padding: 5px 400px 5px 8rem;
+  padding: 5px 385px 5px 8rem;
 
   display: flex;
   flex-direction: column;
@@ -367,6 +360,8 @@ input:-webkit-autofill {
 
 .contact-card-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact-card {
@@ -376,14 +371,12 @@ input:-webkit-autofill {
 
   background-color: var(--white);
   padding: 10px 15px;
-  margin-bottom: 17px;
+  margin: 0 15px 17px 15px;
 
   border: 1px solid var(--red);
   border-radius: 5px;
-}
 
-.contact-card:nth-child(1) {
-  margin-right: 30px;
+  white-space: nowrap;
 }
 
 .contact-card > img {
@@ -493,13 +486,27 @@ input:-webkit-autofill {
   }
 
   .brands-container {
-    padding: 5px 300px 5px 8rem;
+    padding: 5px 285px 5px 8rem;
   }
 
   .contact-container {
-    padding: 5px 300px 5px 8rem;
+    padding: 5px 285px 5px 8rem;
   }
 }
 
-@media (max-width: 970px) {
+@media (max-width: 907px) {
+  .home-img-container {
+    flex-direction: column;
+  }
+
+  .lateral-imgs {
+    margin-right: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  .lateral-imgs div {
+    flex: 1;
+    margin: 5px;
+    flex-basis: 100px;
+  }
 }
