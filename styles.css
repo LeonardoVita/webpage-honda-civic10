@@ -184,7 +184,7 @@ input:-webkit-autofill {
 /* HOME  */
 
 .home-container {
-  padding: 5px 8rem;
+  padding: 5px 400px 5px 8rem;
   margin-bottom: 20px;
 }
 
@@ -211,7 +211,6 @@ input:-webkit-autofill {
 
 .home-container > p {
   font-size: 1.5rem;
-  margin-right: 16rem;
 }
 
 /* CIVIC 10 SECTION  */
@@ -240,6 +239,7 @@ input:-webkit-autofill {
   position: absolute;
   bottom: 30px;
   left: 8rem;
+  right: 400px;
 }
 
 .civic10-text h2 {
@@ -302,7 +302,7 @@ input:-webkit-autofill {
   margin-bottom: 33px;
 }
 
-.hondar-card-container {
+.honda-card-container {
   display: flex;
 }
 
@@ -313,6 +313,7 @@ input:-webkit-autofill {
 
 .honda-card {
   width: 100%;
+  flex: 1;
   border: 1px solid var(--gray-border);
   padding: 0 20px 22px 20px;
 
@@ -357,11 +358,11 @@ input:-webkit-autofill {
 }
 
 .contact-container {
-  padding: 5px 8rem;
+  padding: 5px 400px 5px 8rem;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .contact-card-container {
@@ -372,6 +373,7 @@ input:-webkit-autofill {
   display: flex;
   align-items: center;
   justify-content: center;
+
   background-color: var(--white);
   padding: 10px 15px;
   margin-bottom: 17px;
@@ -406,14 +408,16 @@ input:-webkit-autofill {
   font-style: italic;
 }
 
-.contact-container > h3 {
+.contact-container > div > h3 {
   font-size: 1.5rem;
   font-style: italic;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .social-container {
   display: flex;
+  justify-content: center;
 }
 
 .social-card {
@@ -469,4 +473,33 @@ input:-webkit-autofill {
   margin: 0 20px 0 137px;
   color: var(--copyright);
   font-size: 0.8rem;
+}
+
+@media (max-width: 1154px) {
+  .float-container {
+    right: 1vw;
+  }
+
+  .home-container {
+    padding: 5px 300px 5px 8rem;
+  }
+
+  .civic10-text {
+    right: 300px;
+  }
+
+  .civic10-container {
+    padding: 5px 300px 5px 8rem;
+  }
+
+  .brands-container {
+    padding: 5px 300px 5px 8rem;
+  }
+
+  .contact-container {
+    padding: 5px 300px 5px 8rem;
+  }
+}
+
+@media (max-width: 970px) {
 }
