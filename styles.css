@@ -57,6 +57,10 @@
   margin-bottom: 20px;
 }
 
+.phone-container h2 {
+  min-width: 200px;
+}
+
 .phone-number {
   flex-basis: 354px;
 
@@ -96,6 +100,10 @@
   height: 130px;
   background: transparent url("img/os-eleitos-grande-vencedor-2017_0.png") 0% 0%
     no-repeat padding-box;
+}
+
+.hero-image-container-mobile {
+  display: none;
 }
 
 /* FLOAT CONTACT CONTAINER  */
@@ -208,6 +216,7 @@ input:-webkit-autofill {
   font-weight: 400;
   font-size: 2rem;
 }
+
 .home-img-container {
   display: flex;
   align-items: center;
@@ -233,6 +242,10 @@ input:-webkit-autofill {
   position: relative;
   width: 100%;
   margin-bottom: 40px;
+}
+
+.civic10-img-mobile {
+  display: none;
 }
 
 .civic10-container {
@@ -472,6 +485,7 @@ input:-webkit-autofill {
   padding: 5px 8rem;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -480,6 +494,11 @@ input:-webkit-autofill {
   margin: 0 20px 0 137px;
   color: var(--copyright);
   font-size: 0.8rem;
+}
+
+.ibama-container {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1154px) {
@@ -546,7 +565,6 @@ input:-webkit-autofill {
     justify-content: center;
     align-items: center;
 
-    background: #ddd;
     width: 100%;
     max-width: 80px;
     height: 40px;
@@ -558,11 +576,20 @@ input:-webkit-autofill {
   }
 
   .phone-container {
-    justify-content: center;
+    margin-top: 20px;
   }
 
-  .phone-number {
-    margin-top: 30px;
+  .hero-image-container {
+    display: none;
+  }
+
+  .hero-image-container-mobile {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .hero-image-container-mobile img:nth-child(2) {
+    padding: 0 20px;
   }
 
   .float-wrap {
@@ -583,6 +610,10 @@ input:-webkit-autofill {
     height: 352px;
   }
 
+  .phone-container {
+    padding: 5px 20px;
+  }
+
   .home-container {
     padding: 5px 20px 5px 20px;
   }
@@ -601,5 +632,65 @@ input:-webkit-autofill {
 
   .contact-container {
     padding: 5px 20px 5px 20px;
+  }
+
+  .lateral-imgs {
+    display: none;
+  }
+
+  .civic10-img {
+    display: none;
+  }
+
+  .civic10-background {
+    display: flex;
+    justify-content: center;
+  }
+
+  .civic10-img-mobile {
+    display: block;
+    max-width: 500px;
+  }
+
+  .civic10-text {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    right: auto;
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(-50%);
+  }
+
+  .civic10-text h2 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  .civic10-text p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .copyright-container {
+    padding: 5px 20px;
+
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .copyright-container p {
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media (max-width: 594px) {
+  .phone-container {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .phone-number {
+    margin-top: 30px;
   }
 }
